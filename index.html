@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五星红旗</title>
+    <style>
+        svg{
+            display: block;
+            margin: 50px auto;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <svg width="800" height="500">
+        <g fill="yellow">
+           <!--  <path d="M 74 106 L 122 105"/>
+            <path d="M 74 106 L 112 134"/>
+            <path d="M 112 134 L 98 181"/>
+            <path d="M 98 181 L 136 153"/>
+            <path d="M 136 153 L 176 181"/>
+            <path d="M 176 181 L 162 134"/>
+            <path d="M 162 134 L 200 106"/>
+            <path d="M 200 106 L 153 106"/>
+            <path d="M 153 106 L 136 59"/>
+            <path d="M 136 59 L 122 106"/> -->
+            <path d="M 74 106 L 122 105 L 136 59 
+                    L 153 106 L 200 106 L 162 134
+                    L 176 181 L 136 153 L 98 181
+                    L 112 134 L 74 106"/>
+            <path d="M 242 32 L 252 47 L 242 59 
+                    L 259 56 L 267 70 L 268 53 
+                    L 285 50 L 271 44 L 271 25
+                    L 259 38 L242 32"/>
+            <path d="M 289 98 L 306 104 L 306 120 
+                    L 316 106 L 333 110 L 323 98  
+                    L 333 82 L 316 88 L 306 76 
+                    L 306 93 L 289 98"/>
+            <path d="M 293 169 L 305 177 L 302 193 
+                    L 315 184 L 328 192 L 323 177
+                    L 334 167 L319 167 L 313 150 
+                    L 308 169 L 293 169"/>
+            <path d="M 241 211 L 247 225 L 238 236 
+                    L 253 234 L 263 247 L 265 230 
+                    L 280 227 L 265 220 L 266 203 
+                    L 255 216 L 241 211"/>
+        </g>
+        <defs>
+            <!-- 字体阴影＋模糊 -->
+            <filter id="filter1">
+                <!-- <feGaussianBlur in="SourceGraphic" stdDeviation="5"/> -->
+                <feOffset result="offOut" in="SourceGraphic"  dy="10" />
+                <!-- 过滤的模糊效果 -->
+                <feGaussianBlur result="blurOut" in="offOut" stdDeviation="1" />
+                <!-- 混合对象2个 -->
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+            </filter>
+            <!-- 渐变 -->
+            <linearGradient id="jb">
+                <stop offset="0%" stop-color="#e9b004" stop-opacity="0.5"/>
+                <stop offset="20%" stop-color="#04e970" stop-opacity="0.5"/>
+                <stop offset="40%" stop-color="#e9e604" stop-opacity="0.5"/>
+                <stop offset="60%" stop-color="#04e9e6" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#db04e9" stop-opacity="0.5"/>
+            </linearGradient>
+        </defs>
+        <text x="-1000" y="-500" fill="#e6e904" fill-opacity="0.3"
+        font-size="120" filter="url(#filter1)" font-weight="bold">
+            CHINA
+            <animate 
+                attributeName = "x"
+                attributeType = "xml"
+                from = "0"
+                to = "280"
+                dur = "2s"
+                fill = "freeze"
+            />
+            <animate 
+            attributeName = "y"
+            attributeType = "xml"
+            from = "0"
+            to = "320"
+            dur = "3s"
+            fill = "freeze"
+        />
+           
+        </text>
+        <text x="-500" y="450" font-size="100" fill="url(#jb)" font-weight="bold" 
+        dx="0 20 20 20">
+            祖国万岁
+            <animate 
+                attributeName = "x"
+                attributeType = "xml"
+                from = "0"
+                to = "160"
+                dur = "3s"
+                fill = "freeze"
+                begin = "1s"
+            />
+        </text>    
+        旋转rotate  倾斜skew  缩放scale  移动translate
+    </svg>
+</body>
+</html>
